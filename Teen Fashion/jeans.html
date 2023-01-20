@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Teen Girls & Women's Clothing | TeenFashion</title>
+    <title>Jeans for Teens: Ripped & Distressed Jeans | TeenFashion</title>
     <style>
         * {
             font-family: Visuelt Light Pro, sans-serif;
@@ -221,7 +221,7 @@
             display: grid;
             grid-template-columns: 18% 18% 18% 18% 28%;
             padding: 10px;
-            /* margin-top: 100px; */
+            /* margin-top: 20px; */
         }
 
         footer>.details {
@@ -519,15 +519,15 @@
         try {
             let request = await fetch(API);
             let data = await request.json();
-            console.log(data);
-            fetchedData = data.filter(element => element.title == "Women")
-            console.log(fetchedData);
+            // console.log(data);
+            fetchedData = data.filter(element => element.category == "Jeans")
+            
             Display(fetchedData);
         } catch (error) {
             console.log(error);
         }
     }
-
+    console.log(fetchedData);
     function Display(data) {
         data.forEach((element) => {
             let card = document.createElement("div");

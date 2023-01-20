@@ -118,10 +118,139 @@
         #red {
             color: #c82340;
         }
+        #red>ul>li>a {
+            color: #c82340;
+        }
+        .location:hover{
+            color: #3367a7;
+            cursor: pointer;
+        }
+        .user:hover{
+            color: #3367a7;
+            cursor: pointer;
+        }
+        .cart:hover{
+            color: #3367a7;
+            cursor: pointer;
+        }
 
-        /* .container{
+        .container{
+           display: grid;
+           grid-template-columns: repeat(2,1fr); 
+           gap: 10px;
+           padding-left: 100px;
+           padding-top: 20px;
+        }
+        .signin{
+            width: 70%;
             
-        } */
+        }
+        .signin>div>h1{
+            color: #1e3352;
+        }
+        .signin>div>p{
+            color: gray;
+            font-size: medium;
+            margin-top: -20px;
+        }
+        .signin>form{
+            margin-top: 30px;
+        }
+        .signin>form>p{
+            font-weight: bold;
+            font-size: small;
+            margin-top: 20px;
+        }
+        .signin>form>input{
+            border-radius: 0px;
+            width: 300px;
+        }
+        .signin>form>input::placeholder{
+            font-size: medium;
+            font-weight: normal;
+        }
+        #forget{
+            color: #1e3352;
+            margin-top: 0px;
+            font-size: small;
+            float: right;
+            margin-bottom: 30px;
+            cursor: pointer;
+            font-weight: normal;
+            margin-right: 88px;
+        }
+        #forget:hover{
+            color: #005eb8;
+        }
+        .signin>p{
+            color: gray;
+            font-size: small;
+            margin-top: 30px;
+        }
+        #signin-Btn{
+            height: 40px;
+            border-radius: 5px;
+            color: #1e3352;
+            font-weight: bold;
+            font-size: medium;
+            border: 2px solid #1e3352;
+            background-color: white;
+            width: 310px;
+            cursor: pointer;
+        }
+        #signin-Btn:hover{
+            background-color: #1e3352;
+            color: white;
+        }
+        .signup{
+            width: 70%;
+        }
+        .signup>div>h1{
+            color: #1e3352;
+        }
+        .signup>div>p{
+            color: gray;
+            font-size: 15px;
+            margin-top: -20px;
+        }
+        .signup>div>h2{
+            color: #1e3352;
+        }
+        .signup>form>p{
+            font-weight: bold;
+            font-size: small;
+            margin-top: 20px;
+        }
+        .signup>form>input{
+            border-radius: 0px;
+            width: 300px;
+        }
+        .signup>form>input::placeholder{
+            font-size: medium;
+            font-weight: normal;
+        }
+        .signup>form>select{
+            width: 200px;
+            height: 30px;
+        }
+        #SUpassword{
+            margin-bottom: 30px;
+        }
+        #SU-btn{
+            height: 40px;
+            border-radius: 5px;
+            color: #1e3352;
+            font-weight: bold;
+            font-size: medium;
+            border: 2px solid #1e3352;
+            background-color: white;
+            width: 310px;
+            cursor: pointer;
+        }
+        #SU-btn:hover{
+            background-color: #1e3352;
+            color: white;
+        }
         /* Footer section */
         footer{
             display: grid;
@@ -182,6 +311,7 @@
         }
         hr{
             color: grey;
+            margin-top: 40px;
         }
         .container{
             margin-top: 100px;
@@ -208,7 +338,9 @@
                     </li>
                     <li>Men
                         <ul class="submenu">
-                            <li>Shop All Arrivals</li>
+                            <li>
+                                <a href="/Teen Fashion/men.html">Shop All Arrivals</a>
+                            </li>
                             <li>Topwear</li>
                             <li>Bottomwear</li>
                             <li>Hoodies</li>
@@ -217,14 +349,18 @@
                     </li>
                     <li>Jeans
                         <ul class="submenu">
-                            <li>Shop All Jeans</li>
+                            <li>
+                                <a href="/Teen Fashion/jeans.html">Shop All Arrivals</a>
+                            </li>
                             <li>Women</li>
                             <li>Men</li>
                         </ul>
                     </li>
                     <li id="red">Clearance
                         <ul class="submenu">
-                            <li>Shop All Clearance</li>
+                            <li>
+                                <a href="/Teen Fashion/clearance.html">Shop All Arrivals</a>
+                            </li>
                             <li>Women</li>
                             <li>Men</li>
                         </ul>
@@ -248,7 +384,7 @@
                 </form>
                 <div class="location">
                     <i class="bi bi-geo-alt"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-geo-alt" viewBox="0 0 16 16">
                         <path
                             d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
@@ -257,7 +393,7 @@
                 </div>
                 <div class="user">
                     <i class="bi bi-person"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-person" viewBox="0 0 16 16">
                         <path
                             d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
@@ -265,7 +401,7 @@
                 </div>
                 <div class="cart">
                     <i class="bi bi-bag"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag"
                         viewBox="0 0 16 16">
                         <path
                             d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
@@ -277,17 +413,49 @@
 
     <div class="container">
         <div class="signin">
-            <h1>Returning Customers</h1>
+            <div>
+                <h1>Returning Customers</h1>
             <p>If you are a registered user, please enter your email and password.</p>
+            </div>
             <form>
                 <p>Email Address*</p>
-                <input type="email" id="email" />
+                <input type="email" id="email" placeholder="Email Address" />
                 <p>Password*</p>
-                <input type="password" id="password" />
-                <input type="submit" value="SIGN IN" />
+                <input type="password" id="password" placeholder="Password" />
+                <p id="forget">Forgot Password?</p>
+                <input id="signin-Btn" type="submit" value="SIGN IN" />
               </form>
+              <p>Please see our Privacy Policy. California residents, see our California Privacy Notice and Do Not Sell My Personal Information page.</p>
         </div>
-        <div class="signup"></div>
+        <div class="signup">
+            <div>
+                <h1>New Customers</h1>
+            <p>Creating an account is easy. Just fill out the form below and enjoy the benefits of being a registered customer.</p>
+            <h2>Create An Account</h2>
+            </div>
+            <form>
+                <p>Name</p>
+                <input type="text" id="name" placeholder="Enter Your Full Name">
+                <p>Phone</p>
+                <input type="text" id="number" placeholder="Phone Number">
+                <p>Gender</p>
+                <select>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+                <p>Date Of Birth</p>
+                <input type="text" placeholder="Example:03/28/1968">
+                <p>Email</p>
+                <input type="email" id="SUemail" placeholder="Email Address">
+                <p>Password</p>
+                <input type="password" id="SUpassword" placeholder="Password">
+                <!-- <input type="checkbox" id="terms"><label for="terms">Please Add Me To Aeropostale's Email List. Aeropostale Does Not Share Or Sell Personal Info.</label>
+                <br> -->
+                <input id="SU-btn" type="submit" value="Apply" />
+            </form>
+        </div>
     </div>
 
 
