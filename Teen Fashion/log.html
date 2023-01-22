@@ -464,7 +464,7 @@
                     <div id="details 3"></div>
                     <div id="details 4"></div>
                     <div id="details 5"></div> -->
-                    <button>Logout</button>
+                    <!-- <button id="btn">Logout</button> -->
                 </div>
                 <div class="cart">
                     <i class="bi bi-bag"></i>
@@ -486,9 +486,9 @@
             </div>
             <form id="form-1">
                 <p>Email Address*</p>
-                <input type="email" id="SI-email" placeholder="Email Address" />
+                <input type="email" id="SI-email" placeholder="Email Address" required />
                 <p>Password*</p>
-                <input type="password" id="SI-password" placeholder="Password" />
+                <input type="password" id="SI-password" placeholder="Password" required />
                 <p id="forget">Forgot Password?</p>
                 <input id="signin-Btn" type="submit" value="SIGN IN" />
             </form>
@@ -504,22 +504,22 @@
             </div>
             <form id="form-2">
                 <p>Name</p>
-                <input type="text" id="name" placeholder="Enter Your Full Name">
+                <input type="text" id="name" placeholder="Enter Your Full Name" required>
                 <p>Phone</p>
-                <input type="text" id="number" placeholder="Phone Number">
+                <input type="text" id="number" placeholder="Phone Number" required>
                 <p>Gender</p>
-                <select>
+                <select required>
                     <option value="">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Others</option>
                 </select>
                 <p>Date Of Birth</p>
-                <input id="DOB" type="text" placeholder="Example:03/28/1968">
+                <input id="DOB" type="text" placeholder="Example:03/28/1968" required>
                 <p>Email</p>
-                <input type="email" id="SUemail" placeholder="Email Address">
+                <input type="email" id="SUemail" placeholder="Email Address" required>
                 <p>Password</p>
-                <input type="password" id="SUpassword" placeholder="Password">
+                <input type="password" id="SUpassword" placeholder="Password" required>
                 <!-- <input type="checkbox" id="terms"><label for="terms">Please Add Me To Aeropostale's Email List. Aeropostale Does Not Share Or Sell Personal Info.</label>
                 <br> -->
                 <input id="SU-btn" type="submit" value="Apply" />

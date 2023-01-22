@@ -127,6 +127,19 @@
             color: #3367a7;
             cursor: pointer;
         }
+        .cart{
+            display: flex;
+        }
+        .cart>#count{
+            background-color: #c82340;
+            border-radius: 10px;
+            width: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -6px;
+            height: fit-content;
+        }
 
         .user>a {
             color: #000;
@@ -196,7 +209,7 @@
         .container>div {
             margin-top: 10px;
             width: 100%;
-            height: 475px;
+            /* height: 475px; */
             text-align: center;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
@@ -211,7 +224,7 @@
         }
 
         .container>div>div {
-            margin-top: -12px;
+            /* margin-top: -12px; */
             font-size: small;
             font-weight: bold;
             display: flex;
@@ -222,7 +235,7 @@
             color: grey;
         }
 
-        .container>div>button {
+        .container>div>div>button {
             color: #005eb8;
             border: 2px solid #005eb8;
             padding: 4px;
@@ -233,7 +246,7 @@
             cursor: pointer;
         }
 
-        .container>div>button:hover {
+        .container>div>div>button:hover {
             background-color: #005eb8;
             color: white;
         }
@@ -423,6 +436,7 @@
                                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                         </svg>
                     </a>
+                    <p id="count">0</p>
                 </div>
             </div>
         </div>
@@ -596,6 +610,8 @@
 
     let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
     function Display(data) {
+        let cartCount=document.getElementById("count");
+        cartCount.innerText=cartArr.length;
         container.innerHTML="";
         data.forEach((element) => {
             let card = document.createElement("div");
@@ -613,23 +629,36 @@
             span.innerHTML = "Comp. Value: $79.95";
             price.innerText = `Price Value:$${element.price}`;
 
+            let select=document.createElement("select");
+            select.id="select1";
+            let small=document.createElement("option");
+            let medium=document.createElement("option");
+            let large=document.createElement("option");
+            let xlarge=document.createElement("option");
+            small.innerText="Small";
+            medium.innerText="Medium";
+            large.innerText="Large";
+            xlarge.innerText="X-large";
+            let selBtn=document.createElement("div");
+
             let add = document.createElement("button");
             add.innerText = "Add To Cart";
-
             add.addEventListener("click",function(){
           if(checkDublicate(element)){
             alert("Product Already in Cart");
           }else{
-            cartArr.push({...element,quantity:1});
+            +cartCount.innerText++;
+            let size=select.value;
+            cartArr.push({...element,quantity:1,size:size});
             localStorage.setItem("cart",JSON.stringify(cartArr));
             alert("Product Added To Cart");
           }
         });
-
+            select.append(small,medium,large,xlarge);
+            selBtn.append(select,add);
             prices.append(price, span);
-            card.append(img, name, prices, add);
+            card.append(img, name, prices, selBtn);
             container.append(card);
-
         });
     }
     function checkDublicate(product){

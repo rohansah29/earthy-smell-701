@@ -90,20 +90,20 @@ input[type="submit"]:hover{
                 <h3>BILLING ADDRESS</h3>
                 <form>
                     Full Name
-                    <input type="text" name=""  placeholder="Enter name" id="name">
+                    <input type="text" name=""  placeholder="Enter name" id="name" required>
 
                     Email
-                    <input type="text" name=""  placeholder="Enter email" id="email">
+                    <input type="text" name=""  placeholder="Enter email" id="email" required>
 
                     Address
-                    <input type="text" name=""  placeholder="Enter address" id="address">
+                    <input type="text" name=""  placeholder="Enter address" id="address" required>
 
                     City
                     <input type="text" name=""  placeholder="Enter city" id="city">
-                    <div id="zip">
+                    <div id="zip" required>
                         <label>
                             State
-                          <select id="state">
+                          <select id="state" required>
                             <option>Choose State..</option>
                             <option>Andhra Pradesh</option>
                             <option>Arunachal Pradesh</option>
@@ -134,7 +134,7 @@ input[type="submit"]:hover{
                         </label>
                         <label>
                             Zip Code
-                            <input type="number" name="" placeholder="Zip code" id="code">
+                            <input type="number" name="" placeholder="Zip code" id="code" required>
                         </label>
                     </div>
                 </form>
@@ -153,14 +153,14 @@ input[type="submit"]:hover{
                     <br><br>
 
                     Credit Card Number
-                    <input type="text" name=""  placeholder="Enter card number" id="card">
+                    <input type="text" name=""  placeholder="Enter card number" id="card" required>
 
                     Exp Month
                     <input type="text" name=""  placeholder="Enter Month" id="month">
-                    <div id="zip">
+                    <div id="zip" required>
                         <label>
                             Exp Year
-                          <select id="year">
+                          <select id="year" required>
                             <option>Choose Year..</option>
                             <option>2022</option>
                             <option>2023</option>
@@ -175,7 +175,7 @@ input[type="submit"]:hover{
                         </label>
                         <label>
                             CVV
-                            <input type="number" name="" placeholder="cvv" id="cvv">
+                            <input type="number" name="" placeholder="cvv" id="cvv" required>
                         </label>
                     </div>
                 </form>

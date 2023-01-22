@@ -128,6 +128,19 @@
             color: #3367a7;
             cursor: pointer;
         }
+        .cart{
+            display: flex;
+        }
+        .cart>#count{
+            background-color: #c82340;
+            border-radius: 10px;
+            width: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -6px;
+            height: fit-content;
+        }
 
         .user>a {
             color: #000;
@@ -412,6 +425,7 @@
                                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                         </svg>
                     </a>
+                    <p id="count">0</p>
                 </div>
             </div>
         </div>
@@ -558,6 +572,8 @@
     let container = document.querySelector(".container");
 
     function Display(data) {
+        let cartCount=document.getElementById("count");
+        cartCount.innerText=cart.length;
         container.innerHTML = "";
         let total=document.getElementById("subtotal");
         let finalTotal=document.getElementById("total");
@@ -569,6 +585,8 @@
 
             let name = document.createElement("h2");
             name.innerText = element.description;
+
+            let size=document.createElement("p");
 
             let price = document.createElement("p");
             let prices = document.createElement("div");
@@ -585,10 +603,12 @@
             increment.innerText = "+";
             decrement.innerText = "-"
             quantity.innerText = element.quantity;
+            size.innerText=`Size: ${element.size}`;
 
             remove.addEventListener("click",function(){
           //this logic is use for deleting
           cart=cart.filter((ele)=>{
+            +cartCount.innerText--;
             return ele.id!==element.id;
           });
           localStorage.setItem("cart",JSON.stringify(cart));
@@ -607,8 +627,7 @@
           Display();
           }
         });
-
-            prices.append(price, span);
+            prices.append(price, span,size);
             card.append(img, name, prices,increment,quantity,decrement,remove);
             container.append(card);
 
@@ -637,7 +656,11 @@
         }
     }
     function checkout(){
-        window.location.assign("payment.html");
+        if(cart.length==0){
+            alert("Your Cart is Empty!!")
+        }else{
+            window.location.assign("payment.html");
+        }
     }
 </script>
 
