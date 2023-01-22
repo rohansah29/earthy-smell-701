@@ -5,28 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guys and Girls Clothes, Hoodies, Graphic Tees and Jeans | TeenFashion</title>
+    <title>Clearance Cloths for Teen Girls & Boys | TeenFashion</title>
     <style>
         * {
             font-family: Visuelt Light Pro, sans-serif;
         }
-        #slideshow{
-            /* margin-top: 90px; */
-            /* padding: 10px; */
-            height: 120px;
-            /* border: 2px solid red; */
-        }
-        #slideshow>img{
-            width: 100%;
-            margin-top: 90px;
-        }
+
         .navbar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             background-color: white;
             /* margin-left: 30px; */
             width: 100%;
-            margin-top: -10px;
+            margin-top: -100px;
             box-shadow: rgba(17, 17, 26, 0.2) 0px 1px 0px;
         }
 
@@ -128,21 +119,11 @@
         #red {
             color: #c82340;
         }
-
-        #red>ul>li>a {
+        #red>ul>li>a{
             color: #c82340;
         }
 
         .location:hover {
-            color: #3367a7;
-            cursor: pointer;
-        }
-
-        .user>a {
-            color: #000;
-        }
-
-        .user>a:hover {
             color: #3367a7;
             cursor: pointer;
         }
@@ -160,6 +141,15 @@
             height: fit-content;
         }
 
+        .user>a {
+            color: #000;
+        }
+
+        .user>a:hover {
+            color: #3367a7;
+            cursor: pointer;
+        }
+
         .cart>a {
             color: #000;
         }
@@ -169,100 +159,96 @@
             cursor: pointer;
         }
 
-        #safety {
-            background-color: #14304b;
-            width: 100%;
+        /* body */
+        #filter-2{
+            margin-top: 100px;
+            margin-bottom: -40px;
         }
-
-        #safety>p {
-            background-color: #14304b;
-            color: #809AAA;
-            width: 70%;
-            text-align: center;
-            display: block;
-            margin: auto;
-            padding: 10px;
-            font-size: smaller;
+        #from{
+            width: 60px;
         }
-
-        .container-1>img {
-            width: 100%;
+        #to{
+            width: 60px;
         }
-
-        .container-2 {
-            display: grid;
-            grid-template-columns: 65% 35%;
-        }
-
-        .container-2>.l1>#text-1 {
-            color: #ee5e68;
-            font-size: 70px;
-            font-weight: bolder;
-            margin-top: -5px;
-        }
-
-        .container-2>.l1>#text-2 {
-            color: #ee5e68;
-            font-size: 40px;
-            margin-top: -60px;
-        }
-
-        .container-2>.l2>.btn-1 {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 12px;
-            margin-left: -50px;
-        }
-
-        .container-2>.l2>.btn-1>button {
-            height: 45px;
-            width: 220px;
-            color: #ee5e68;
+        #sub{
+            width: 60px;
+            font-size: x-large;
+            border: none;
             background-color: white;
-            border: 2px solid #ee5e68;
-            border-radius: 4px;
-        }
-
-        .container-2>.l2>.btn-1>button:hover {
-            background-color: #ee5e68;
-            color: white;
             cursor: pointer;
         }
-
-        .container-3>img {
-            width: 100%;
+        #sub:hover{
+            color: #c82340;
         }
-
-        .container-4 {
-            display: grid;
-            grid-template-columns: 65% 35%;
-            background-color: #ee5e68;
-            border-radius: 10px;
-            color: white;
-            padding-left: 30px;
-            font-size: large;
-        }
-
-        .container-4>.btn-2>button {
-            height: 45px;
-            width: 220px;
-            border: 2px solid white;
-            border-radius: 4px;
-            background-color: #ee5e68;
-            color: white;
-            cursor: pointer;
-            margin-top: 40px;
-            font-size: medium;
+        #filter-2>p{
             font-weight: bold;
         }
-
-        .container-4>.btn-2>button:hover {
-            color: #ee5e68;
-            background-color: white;
+        #filter {
+            float: right;
+            height: 46px;
+            width: 250px;
+            border: 3px solid black;
+            font-weight: bold;
+            font-size: medium;
+            border-radius: 50px;
         }
 
-        .poster>img {
+        #filter * {
+            font-size: medium;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             width: 100%;
+            gap: 30px;
+            justify-content: center;
+
+        }
+
+        .container>div {
+            margin-top: 10px;
+            width: 100%;
+            /* height: 475px; */
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .container>div>img {
+            height: 350px;
+            width: 100%;
+        }
+
+        .container>div>h2 {
+            font-size: medium;
+        }
+
+        .container>div>div {
+            /* margin-top: -12px; */
+            font-size: small;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container>div>div>#span {
+            color: grey;
+        }
+
+        .container>div>div>button {
+            color: #005eb8;
+            border: 2px solid #005eb8;
+            padding: 4px;
+            border-radius: 10px;
+            font-size: x-small;
+            font-weight: bold;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .container>div>div>button:hover {
+            background-color: #005eb8;
+            color: white;
         }
 
         /* Footer section */
@@ -270,6 +256,7 @@
             display: grid;
             grid-template-columns: 18% 18% 18% 18% 28%;
             padding: 10px;
+            /* margin-top: 20px; */
         }
 
         footer>.details {
@@ -337,14 +324,13 @@
 
         hr {
             color: grey;
+            margin-top: 40px;
         }
-
-        .user {
+        .user{
             display: flex;
             flex-direction: column;
         }
-
-        .user>button {
+        .user>button{
             border: none;
             background-color: white;
             margin-left: -10px;
@@ -352,8 +338,7 @@
             font-weight: bold;
             cursor: pointer;
         }
-
-        .user>button:hover {
+        .user>button:hover{
             color: #005eb8;
         }
     </style>
@@ -361,13 +346,14 @@
 
 <body>
     <div class="header">
+        <div class="header-promotion"></div>
         <div class="navbar" style="position: fixed;">
             <div class="left">
                 <ul>
-                    <li onclick="Women()">Women
+                    <li>Women
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a href="/Teen Fashion/women.html">Shop All Arrivals</a>
                             </li>
                             <li>Topwear</li>
                             <li>Bottomwear</li>
@@ -375,10 +361,10 @@
                             <li>Dresses</li>
                         </ul>
                     </li>
-                    <li onclick="men()">Men
+                    <li>Men
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a href="/Teen Fashion/men.html">Shop All Arrivals</a>
                             </li>
                             <li>Topwear</li>
                             <li>Bottomwear</li>
@@ -386,19 +372,19 @@
                             <li>OuterWear</li>
                         </ul>
                     </li>
-                    <li onclick="jeans()">Jeans
+                    <li>Jeans
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a href="/Teen Fashion/jeans.html">Shop All Arrivals</a>
                             </li>
                             <li>Women</li>
                             <li>Men</li>
                         </ul>
                     </li>
-                    <li id="red" onclick="clearance()">Clearance
+                    <li id="red">Clearance
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a href="/Teen Fashion/clearance.html">Shop All Arrivals</a>
                             </li>
                             <li>Women</li>
                             <li>Men</li>
@@ -411,8 +397,8 @@
             </div>
             <div class="right">
                 <form action="search">
-                    <input id="inputId" type="text" placeholder="Search">
-                    <button id="search">
+                    <input type="text" placeholder="Search">
+                    <button>
                         <i class="bi bi-search"></i>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16">
@@ -439,7 +425,7 @@
                                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
                         </svg>
                     </a>
-                    <button id="btn" onclick="logout()">Logout</button>
+                    <button onclick="logout()">Logout</button>
                 </div>
                 <div class="cart">
                     <a href="/Teen Fashion/cart.html">
@@ -454,60 +440,23 @@
                 </div>
             </div>
         </div>
-        <div id="slideshow"></div>
     </div>
-    <div class="body">
-        <div id="safety">
-            <p><b>Good
-                    Things Take Time.</b> Over the last few weeks, we've implemented extra precautionary measures
-                in our warehouse to ensure the health and safety of our customers and associates. Because of this
-                your shipment may experience delays.Thank you for your patience and understanding.
-            </p>
-        </div>
+    <div id="filter-2">
+        <p>Sort by price:</p>
+        <form id="form">
+            <input placeholder="From" type="number" id="from" />
+            <input placeholder="To" type="number" id="to" />
+            <input id="sub" type="submit" value="↑↓" />
+          </form>
+    </div>
+    <select id="filter">
+        <option value="">Category</option>
+        <option value="Men">Men</option>
+        <option value="Women">Women</option>
+    </select>
+    <div class="container"></div>
 
-        <div class="container-1">
-            <img src="/Teen Fashion/Images/aero_unite.png" alt="Error">
-        </div>
-        <div class="container-2">
-            <div class="l1">
-                <p id="text-1">50-70% Off Everything!</p>
-                <p id="text-2">& Our Biggest Shorts Event of The Season!</p>
-                <p></p>
-            </div>
-            <div class="l2">
-                <div class="btn-1">
-                    <button onclick="Women()">Shop Girls</button>
-                    <button onclick="Women()">Girls Shorts<b>$11.87 & Up</b></button>
-                </div>
-                <div class="btn-1">
-                    <button onclick="men()">Shop Guys</button>
-                    <button onclick="men()">Guys Shorts<b>$12 & Up</b></button>
-                </div>
-            </div>
-        </div>
-        <div class="container-3">
-            <img src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw43c05651/images/homepage/2020/061120/DESKTOP@2x.jpg"
-                alt="Error">
-        </div>
-        <div class="container-4">
-            <div>
-                <p><b>POV:Aero Pride Ambassador</b></p>
-                <p>"What makes this community so magical is the sheer resilience againts hate<br>and the unfaltering
-                    emission of love, acceptance and inclusivity."<strong>@jillmonica</strong></p>
-            </div>
-            <div class="btn-2">
-                <button>Learn More</button>
-            </div>
-        </div>
-        <div class="poster">
-            <img onclick="Women()" src="/Teen Fashion/Images/girls poster.png" alt="Error">
-            <img onclick="men()" src="/Teen Fashion/Images/guy_shorts.png" alt="Error">
-            <img onclick="clearance()" src="/Teen Fashion/Images/tees_poster.png" alt="Error">
-            <img onclick="jeans()" src="/Teen Fashion/Images/jeans_poster.png" alt="Error">
-            <img src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw50dec257/images/homepage/2020/051320/ECO_DESKTOP@2x-min.jpg"
-                alt="Error">
-        </div>
-    </div>
+
     <hr>
     <footer>
         <div class="details">
@@ -620,79 +569,120 @@
     </footer>
 </body>
 <script>
-    let tasks = JSON.parse(localStorage.getItem("account-data"));
-    let button=document.getElementById("btn");
-    
+    const API = "https://63c6562ed307b7696736ff7b.mockapi.io/products";
+    let container = document.querySelector(".container");
+    let filterForm = document.getElementById("form");
+    let fromInput = document.getElementById("from");
+
+    let fetchedData = [];
+    asyncFetch();
+
+    async function asyncFetch() {
+        try {
+            let request = await fetch(API);
+            let data = await request.json();
+            console.log(data);
+            fetchedData = data.filter(element => element.title == "Men" || element.title == "Women")
+            console.log(fetchedData);
+            // Display(fetchedData);
+            filterData(fetchedData);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    filterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let fromPrice = Number(filterForm.from.value);
+      let toPrice = +filterForm.to.value;
+      console.log(fromPrice + " " + toPrice);
+
+      let filtered = fetchedData.filter((element) => {
+        if (element.price >= fromPrice && element.price <= toPrice) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      Display(filtered);
+    });
+
     let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
-    let cartCount=document.getElementById("count");
+    function Display(data) {
+        let cartCount=document.getElementById("count");
         cartCount.innerText=cartArr.length;
+        container.innerHTML="";
+        data.forEach((element) => {
+            let card = document.createElement("div");
 
-        function slideshowFun(images){
-  let slideshow=document.getElementById("slideshow");
-  let img = document.createElement('img');
-  this.document.getElementById("slideshow").appendChild(img);
-  img.src =movieImages[0];
-  setInterval(function() {
-    console.log("interval");
-    if(i==movieImages.length){
-      i=0;
+            let img = document.createElement("img");
+            img.setAttribute("src", element.avatar);
+
+            let name = document.createElement("h2");
+            name.innerText = element.description;
+
+            let price = document.createElement("p");
+            let prices = document.createElement("div");
+            let span = document.createElement("p");
+            span.id = "span";
+            span.innerHTML = "Comp. Value: $79.95";
+            price.innerText = `Price Value:$${element.price}`;
+
+            let select=document.createElement("select");
+            select.id="select1";
+            let small=document.createElement("option");
+            let medium=document.createElement("option");
+            let large=document.createElement("option");
+            let xlarge=document.createElement("option");
+            small.innerText="Small";
+            medium.innerText="Medium";
+            large.innerText="Large";
+            xlarge.innerText="X-large";
+            let selBtn=document.createElement("div");
+
+            let add = document.createElement("button");
+            add.innerText = "Add To Cart";
+            add.addEventListener("click",function(){
+          if(checkDublicate(element)){
+            alert("Product Already in Cart");
+          }else{
+            +cartCount.innerText++;
+            let size=select.value;
+            cartArr.push({...element,quantity:1,size:size});
+            localStorage.setItem("cart",JSON.stringify(cartArr));
+            alert("Product Added To Cart");
+          }
+        });
+            select.append(small,medium,large,xlarge);
+            selBtn.append(select,add);
+            prices.append(price, span);
+            card.append(img, name, prices, selBtn);
+            container.append(card);
+        });
     }
-    img.src =movieImages[i];
-    i++;
-    
-  },2000);
-}
-
-var movieImages = [
-  "./images/slide1.png",
-  "./images/slide2.png",
-  "./images/slide3.png",
-  "./images/slide4.png",
-]
-
-let i=1;
-window.addEventListener("load", function () {
-console.log("yes");
-    let img = document.createElement('img');
-      img.src =movieImages[i];
-      slideshowFun(movieImages);
-});
-
-    function Women() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("women.html");
+    function checkDublicate(product){
+      for(let i=0;i<cartArr.length;i++){
+        if(cartArr[i].id===product.id){
+          return true;
+        }
+      }
+      return false;
+    }
+    let filtered=document.getElementById("filter");
+    filtered.addEventListener("change",function(){
+        asyncFetch();
+    });
+    function filterData(data){
+      let  filterValue=filtered.value;
+        if(filterValue===""){
+          Display(data);
+        }else{
+          data=data.filter((product)=>{
+            return product.title==filterValue;
+          });
+          Display(data);
         }
     }
-
-    function men() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("men.html");
-        }
-    }
-
-    function jeans() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("jeans.html");
-        }
-    }
-
-    function clearance() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("clearance.html");
-        }
-    }
+    let tasks = JSON.parse(localStorage.getItem("account-data"));
     function logout() {
         if (tasks === null) {
             alert("You have to SignUp/LogIn first.");
@@ -700,24 +690,9 @@ console.log("yes");
         } else {
             confirm("Do you really want logout?");
             localStorage.clear();
-            const myTimeout = setTimeout(location.reload(), 5000);
+            window.location.assign("index.html");
         }
     }
-    if(tasks===null){
-        button.innerText="LogIn";
-    }else{
-        button.innerText="Logout";
-    }
-    // let searchInp=document.querySelector("#search");
-    // searchInp.addEventListener("submit",()=>{
-    //     let input=document.querySelector("#inputId").value;
-    //     localStorage.setItem("search",JSON.stringify(input));
-    //     window.location.href="clearance.html";
-    // })
-
-
-
-
 </script>
 
 </html>

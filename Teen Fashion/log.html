@@ -10,23 +10,14 @@
         * {
             font-family: Visuelt Light Pro, sans-serif;
         }
-        #slideshow{
-            /* margin-top: 90px; */
-            /* padding: 10px; */
-            height: 120px;
-            /* border: 2px solid red; */
-        }
-        #slideshow>img{
-            width: 100%;
-            margin-top: 90px;
-        }
+
         .navbar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             background-color: white;
             /* margin-left: 30px; */
             width: 100%;
-            margin-top: -10px;
+            margin-top: -100px;
             box-shadow: rgba(17, 17, 26, 0.2) 0px 1px 0px;
         }
 
@@ -138,131 +129,155 @@
             cursor: pointer;
         }
 
-        .user>a {
-            color: #000;
-        }
-
-        .user>a:hover {
-            color: #3367a7;
-            cursor: pointer;
-        }
-        .cart{
-            display: flex;
-        }
-        .cart>#count{
-            background-color: #c82340;
-            border-radius: 10px;
-            width: 15px;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            margin-top: -6px;
-            height: fit-content;
-        }
-
-        .cart>a {
-            color: #000;
-        }
-
-        .cart>a:hover {
+        .user:hover {
             color: #3367a7;
             cursor: pointer;
         }
 
-        #safety {
-            background-color: #14304b;
-            width: 100%;
+        .cart:hover {
+            color: #3367a7;
+            cursor: pointer;
         }
 
-        #safety>p {
-            background-color: #14304b;
-            color: #809AAA;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding-left: 100px;
+            padding-top: 20px;
+        }
+
+        .signin {
             width: 70%;
-            text-align: center;
-            display: block;
-            margin: auto;
-            padding: 10px;
-            font-size: smaller;
+
         }
 
-        .container-1>img {
-            width: 100%;
+        .signin>div>h1 {
+            color: #1e3352;
         }
 
-        .container-2 {
-            display: grid;
-            grid-template-columns: 65% 35%;
-        }
-
-        .container-2>.l1>#text-1 {
-            color: #ee5e68;
-            font-size: 70px;
-            font-weight: bolder;
-            margin-top: -5px;
-        }
-
-        .container-2>.l1>#text-2 {
-            color: #ee5e68;
-            font-size: 40px;
-            margin-top: -60px;
-        }
-
-        .container-2>.l2>.btn-1 {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 12px;
-            margin-left: -50px;
-        }
-
-        .container-2>.l2>.btn-1>button {
-            height: 45px;
-            width: 220px;
-            color: #ee5e68;
-            background-color: white;
-            border: 2px solid #ee5e68;
-            border-radius: 4px;
-        }
-
-        .container-2>.l2>.btn-1>button:hover {
-            background-color: #ee5e68;
-            color: white;
-            cursor: pointer;
-        }
-
-        .container-3>img {
-            width: 100%;
-        }
-
-        .container-4 {
-            display: grid;
-            grid-template-columns: 65% 35%;
-            background-color: #ee5e68;
-            border-radius: 10px;
-            color: white;
-            padding-left: 30px;
-            font-size: large;
-        }
-
-        .container-4>.btn-2>button {
-            height: 45px;
-            width: 220px;
-            border: 2px solid white;
-            border-radius: 4px;
-            background-color: #ee5e68;
-            color: white;
-            cursor: pointer;
-            margin-top: 40px;
+        .signin>div>p {
+            color: gray;
             font-size: medium;
+            margin-top: -20px;
+        }
+
+        .signin>form {
+            margin-top: 30px;
+        }
+
+        .signin>form>p {
             font-weight: bold;
+            font-size: small;
+            margin-top: 20px;
         }
 
-        .container-4>.btn-2>button:hover {
-            color: #ee5e68;
+        .signin>form>input {
+            border-radius: 0px;
+            width: 300px;
+        }
+
+        .signin>form>input::placeholder {
+            font-size: medium;
+            font-weight: normal;
+        }
+
+        #forget {
+            color: #1e3352;
+            margin-top: 0px;
+            font-size: small;
+            float: right;
+            margin-bottom: 30px;
+            cursor: pointer;
+            font-weight: normal;
+            margin-right: 35%;
+        }
+
+        #forget:hover {
+            color: #005eb8;
+        }
+
+        .signin>p {
+            color: gray;
+            font-size: small;
+            margin-top: 30px;
+        }
+
+        #signin-Btn {
+            height: 40px;
+            border-radius: 5px;
+            color: #1e3352;
+            font-weight: bold;
+            font-size: medium;
+            border: 2px solid #1e3352;
             background-color: white;
+            width: 310px;
+            cursor: pointer;
         }
 
-        .poster>img {
-            width: 100%;
+        #signin-Btn:hover {
+            background-color: #1e3352;
+            color: white;
+        }
+
+        .signup {
+            width: 70%;
+        }
+
+        .signup>div>h1 {
+            color: #1e3352;
+        }
+
+        .signup>div>p {
+            color: gray;
+            font-size: 15px;
+            margin-top: -20px;
+        }
+
+        .signup>div>h2 {
+            color: #1e3352;
+        }
+
+        .signup>form>p {
+            font-weight: bold;
+            font-size: small;
+            margin-top: 20px;
+        }
+
+        .signup>form>input {
+            border-radius: 0px;
+            width: 300px;
+        }
+
+        .signup>form>input::placeholder {
+            font-size: medium;
+            font-weight: normal;
+        }
+
+        .signup>form>select {
+            width: 200px;
+            height: 30px;
+        }
+
+        #SUpassword {
+            margin-bottom: 30px;
+        }
+
+        #SU-btn {
+            height: 40px;
+            border-radius: 5px;
+            color: #1e3352;
+            font-weight: bold;
+            font-size: medium;
+            border: 2px solid #1e3352;
+            background-color: white;
+            width: 310px;
+            cursor: pointer;
+        }
+
+        #SU-btn:hover {
+            background-color: #1e3352;
+            color: white;
         }
 
         /* Footer section */
@@ -270,6 +285,7 @@
             display: grid;
             grid-template-columns: 18% 18% 18% 18% 28%;
             padding: 10px;
+            /* margin-top: 100px; */
         }
 
         footer>.details {
@@ -337,14 +353,17 @@
 
         hr {
             color: grey;
+            margin-top: 40px;
         }
 
-        .user {
+        .container {
+            margin-top: 100px;
+        }
+        .user{
             display: flex;
             flex-direction: column;
         }
-
-        .user>button {
+        .user>button{
             border: none;
             background-color: white;
             margin-left: -10px;
@@ -352,8 +371,7 @@
             font-weight: bold;
             cursor: pointer;
         }
-
-        .user>button:hover {
+        .user>button:hover{
             color: #005eb8;
         }
     </style>
@@ -361,13 +379,14 @@
 
 <body>
     <div class="header">
+        <div class="header-promotion"></div>
         <div class="navbar" style="position: fixed;">
             <div class="left">
                 <ul>
-                    <li onclick="Women()">Women
+                    <li  onclick="Women()">Women
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a onclick="Women()">Shop All Arrivals</a>
                             </li>
                             <li>Topwear</li>
                             <li>Bottomwear</li>
@@ -378,7 +397,7 @@
                     <li onclick="men()">Men
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a onclick="men()">Shop All Arrivals</a>
                             </li>
                             <li>Topwear</li>
                             <li>Bottomwear</li>
@@ -389,7 +408,7 @@
                     <li onclick="jeans()">Jeans
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a onclick="jeans()">Shop All Arrivals</a>
                             </li>
                             <li>Women</li>
                             <li>Men</li>
@@ -398,7 +417,7 @@
                     <li id="red" onclick="clearance()">Clearance
                         <ul class="submenu">
                             <li>
-                                <a>Shop All Arrivals</a>
+                                <a onclick="clearance()">Shop All Arrivals</a>
                             </li>
                             <li>Women</li>
                             <li>Men</li>
@@ -411,8 +430,8 @@
             </div>
             <div class="right">
                 <form action="search">
-                    <input id="inputId" type="text" placeholder="Search">
-                    <button id="search">
+                    <input type="text" placeholder="Search">
+                    <button>
                         <i class="bi bi-search"></i>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16">
@@ -431,83 +450,84 @@
                     </svg>
                 </div>
                 <div class="user">
-                    <a href="/Teen Fashion/log.html">
+                    <div>
                         <i class="bi bi-person"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                        </svg>
-                    </a>
-                    <button id="btn" onclick="logout()">Logout</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                    </svg>
+                    </div>
+                    
+                    <!-- <div id="details 1"></div>
+                    <div id="details 2"></div>
+                    <div id="details 3"></div>
+                    <div id="details 4"></div>
+                    <div id="details 5"></div> -->
+                    <!-- <button id="btn">Logout</button> -->
                 </div>
                 <div class="cart">
-                    <a href="/Teen Fashion/cart.html">
-                        <i class="bi bi-bag"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            class="bi bi-bag" viewBox="0 0 16 16">
-                            <path
-                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                        </svg>
-                    </a>
-                    <p id="count">0</p>
+                    <i class="bi bi-bag"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
                 </div>
             </div>
         </div>
-        <div id="slideshow"></div>
     </div>
-    <div class="body">
-        <div id="safety">
-            <p><b>Good
-                    Things Take Time.</b> Over the last few weeks, we've implemented extra precautionary measures
-                in our warehouse to ensure the health and safety of our customers and associates. Because of this
-                your shipment may experience delays.Thank you for your patience and understanding.
-            </p>
-        </div>
 
-        <div class="container-1">
-            <img src="/Teen Fashion/Images/aero_unite.png" alt="Error">
-        </div>
-        <div class="container-2">
-            <div class="l1">
-                <p id="text-1">50-70% Off Everything!</p>
-                <p id="text-2">& Our Biggest Shorts Event of The Season!</p>
-                <p></p>
-            </div>
-            <div class="l2">
-                <div class="btn-1">
-                    <button onclick="Women()">Shop Girls</button>
-                    <button onclick="Women()">Girls Shorts<b>$11.87 & Up</b></button>
-                </div>
-                <div class="btn-1">
-                    <button onclick="men()">Shop Guys</button>
-                    <button onclick="men()">Guys Shorts<b>$12 & Up</b></button>
-                </div>
-            </div>
-        </div>
-        <div class="container-3">
-            <img src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw43c05651/images/homepage/2020/061120/DESKTOP@2x.jpg"
-                alt="Error">
-        </div>
-        <div class="container-4">
+    <div class="container">
+        <div class="signin">
             <div>
-                <p><b>POV:Aero Pride Ambassador</b></p>
-                <p>"What makes this community so magical is the sheer resilience againts hate<br>and the unfaltering
-                    emission of love, acceptance and inclusivity."<strong>@jillmonica</strong></p>
+                <h1>Returning Customers</h1>
+                <p>If you are a registered user, please enter your email and password.</p>
             </div>
-            <div class="btn-2">
-                <button>Learn More</button>
-            </div>
+            <form id="form-1">
+                <p>Email Address*</p>
+                <input type="email" id="SI-email" placeholder="Email Address" required />
+                <p>Password*</p>
+                <input type="password" id="SI-password" placeholder="Password" required />
+                <p id="forget">Forgot Password?</p>
+                <input id="signin-Btn" type="submit" value="SIGN IN" />
+            </form>
+            <p>Please see our Privacy Policy. California residents, see our California Privacy Notice and Do Not Sell My
+                Personal Information page.</p>
         </div>
-        <div class="poster">
-            <img onclick="Women()" src="/Teen Fashion/Images/girls poster.png" alt="Error">
-            <img onclick="men()" src="/Teen Fashion/Images/guy_shorts.png" alt="Error">
-            <img onclick="clearance()" src="/Teen Fashion/Images/tees_poster.png" alt="Error">
-            <img onclick="jeans()" src="/Teen Fashion/Images/jeans_poster.png" alt="Error">
-            <img src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw50dec257/images/homepage/2020/051320/ECO_DESKTOP@2x-min.jpg"
-                alt="Error">
+        <div class="signup">
+            <div>
+                <h1>New Customers</h1>
+                <p>Creating an account is easy. Just fill out the form below and enjoy the benefits of being a
+                    registered customer.</p>
+                <h2>Create An Account</h2>
+            </div>
+            <form id="form-2">
+                <p>Name</p>
+                <input type="text" id="name" placeholder="Enter Your Full Name" required>
+                <p>Phone</p>
+                <input type="text" id="number" placeholder="Phone Number" required>
+                <p>Gender</p>
+                <select required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+                <p>Date Of Birth</p>
+                <input id="DOB" type="text" placeholder="Example:03/28/1968" required>
+                <p>Email</p>
+                <input type="email" id="SUemail" placeholder="Email Address" required>
+                <p>Password</p>
+                <input type="password" id="SUpassword" placeholder="Password" required>
+                <!-- <input type="checkbox" id="terms"><label for="terms">Please Add Me To Aeropostale's Email List. Aeropostale Does Not Share Or Sell Personal Info.</label>
+                <br> -->
+                <input id="SU-btn" type="submit" value="Apply" />
+            </form>
         </div>
     </div>
+
+
     <hr>
     <footer>
         <div class="details">
@@ -620,104 +640,80 @@
     </footer>
 </body>
 <script>
-    let tasks = JSON.parse(localStorage.getItem("account-data"));
-    let button=document.getElementById("btn");
+    let form = document.getElementById("form-2");
+    let name = document.getElementById("name");
+    let number = document.getElementById("number");
+    let gender = document.querySelector("select");
+    let DOB = document.getElementById("DOB");
+    let email = document.getElementById("SUemail");
+    let password = document.getElementById("SUpassword");
+    let data = JSON.parse(localStorage.getItem("account-data"));
+    if (data == null) {
+        data = [];
+    };
+
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let obj = {
+            name: name.value,
+            email: email.value,
+            password: password.value,
+            number: number.value,
+            gender: gender.value,
+            DOB: DOB.value,
+        };
+        data.push(obj);
+        localStorage.setItem("account-data", JSON.stringify(data));
+        alert("Congratulations! Your Account Created Sucessfully! Now SignIn for Explore.");
+    });
+
     
-    let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
-    let cartCount=document.getElementById("count");
-        cartCount.innerText=cartArr.length;
 
-        function slideshowFun(images){
-  let slideshow=document.getElementById("slideshow");
-  let img = document.createElement('img');
-  this.document.getElementById("slideshow").appendChild(img);
-  img.src =movieImages[0];
-  setInterval(function() {
-    console.log("interval");
-    if(i==movieImages.length){
-      i=0;
-    }
-    img.src =movieImages[i];
-    i++;
-    
-  },2000);
-}
+    // let displayN = document.getElementById("details 1");
+    // let displayE = document.getElementById("details 2");
+    // let displayNum = document.getElementById("details 3");
+    // let displaySex = document.getElementById("details 4");
+    // let displayDOB = document.getElementById("details 5");
+    // let user = document.getElementById("user");
+    // let tasks = JSON.parse(localStorage.getItem("account-data"));
+    // if (tasks !== "") {
+    //     displayN.innerText = tasks.name;
+    //     displayE.innerText = tasks.email;
+    //     displayNum.innerText = tasks.number;
+    //     displaySex.innerText = tasks.gender;
+    //     displayDOB.innerHTML = tasks.DOB;
+    // }
 
-var movieImages = [
-  "./images/slide1.png",
-  "./images/slide2.png",
-  "./images/slide3.png",
-  "./images/slide4.png",
-]
 
-let i=1;
-window.addEventListener("load", function () {
-console.log("yes");
-    let img = document.createElement('img');
-      img.src =movieImages[i];
-      slideshowFun(movieImages);
-});
 
-    function Women() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("women.html");
+    //SignIn code
+    let SignInform = document.getElementById("form-1");
+    SignInform.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let SIemail = document.getElementById("SI-email").value;
+        let SIpassword = document.getElementById("SI-password").value;
+        let displayN = document.getElementById("details 1");
+        let displayE = document.getElementById("details 2");
+        let displayNum = document.getElementById("details 3");
+        let displaySex = document.getElementById("details 4");
+        let displayDOB = document.getElementById("details 5");
+        let tasks = JSON.parse(localStorage.getItem("account-data"));
+        for (let i = 0; i < tasks.length; i++) {
+            if ((tasks[i].email == SIemail) && (tasks[i].password == SIpassword)) {
+                window.location.assign("index.html");
+                alert("Hi," + tasks[i].name + " Signed In Successfully!");
+                displayN.innerText = tasks[i].name;
+                displayE.innerText = tasks[i].email;
+                displayNum.innerText = tasks[i].number;
+                displaySex.innerText = tasks[i].gender;
+                displayDOB.innerHTML = tasks[i].DOB;
+            } else {
+                alert("Wrong Credentials,login failed!");
+            }
         }
-    }
 
-    function men() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("men.html");
-        }
-    }
-
-    function jeans() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("jeans.html");
-        }
-    }
-
-    function clearance() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            window.location.assign("clearance.html");
-        }
-    }
-    function logout() {
-        if (tasks === null) {
-            alert("You have to SignUp/LogIn first.");
-            window.location.assign("log.html");
-        } else {
-            confirm("Do you really want logout?");
-            localStorage.clear();
-            const myTimeout = setTimeout(location.reload(), 5000);
-        }
-    }
-    if(tasks===null){
-        button.innerText="LogIn";
-    }else{
-        button.innerText="Logout";
-    }
-    // let searchInp=document.querySelector("#search");
-    // searchInp.addEventListener("submit",()=>{
-    //     let input=document.querySelector("#inputId").value;
-    //     localStorage.setItem("search",JSON.stringify(input));
-    //     window.location.href="clearance.html";
-    // })
-
-
-
-
+    });
 </script>
 
 </html>
