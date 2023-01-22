@@ -17,7 +17,7 @@
             background-color: white;
             /* margin-left: 30px; */
             width: 100%;
-            margin-top: -8px;
+            margin-top: -100px;
             box-shadow: rgba(17, 17, 26, 0.2) 0px 1px 0px;
         }
 
@@ -147,8 +147,30 @@
         }
 
         /* body */
+        #filter-2{
+            margin-top: 100px;
+            margin-bottom: -40px;
+        }
+        #from{
+            width: 60px;
+        }
+        #to{
+            width: 60px;
+        }
+        #sub{
+            width: 60px;
+            font-size: x-large;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        #sub:hover{
+            color: #c82340;
+        }
+        #filter-2>p{
+            font-weight: bold;
+        }
         #filter {
-            margin-top: 110px;
             float: right;
             height: 46px;
             width: 250px;
@@ -291,6 +313,21 @@
             color: grey;
             margin-top: 40px;
         }
+        .user{
+            display: flex;
+            flex-direction: column;
+        }
+        .user>button{
+            border: none;
+            background-color: white;
+            margin-left: -10px;
+            width: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .user>button:hover{
+            color: #005eb8;
+        }
     </style>
 </head>
 
@@ -375,6 +412,7 @@
                                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
                         </svg>
                     </a>
+                    <button onclick="logout()">Logout</button>
                 </div>
                 <div class="cart">
                     <a href="/Teen Fashion/cart.html">
@@ -389,10 +427,20 @@
             </div>
         </div>
     </div>
+    <div id="filter-2">
+        <p>Sort by price:</p>
+        <form id="form">
+            <input placeholder="From" type="number" id="from" />
+            <input placeholder="To" type="number" id="to" />
+            <input id="sub" type="submit" value="↑↓" />
+          </form>
+    </div>
     <select id="filter">
-        <option value="">Sort By</option>
-        <option value="Laptop">Price High to Low</option>
-        <option value="Mobile">Price Low to High</option>
+        <option value="">Category</option>
+        <option value="Tops">Topwear</option>
+        <option value="Bottoms">Bottomwear</option>
+        <option value="Hoodies">Hoodies</option>
+        <option value="Outerwear">Dresses</option>
     </select>
     <div class="container"></div>
 
@@ -511,6 +559,8 @@
 <script>
     const API = "https://63c6562ed307b7696736ff7b.mockapi.io/products";
     let container = document.querySelector(".container");
+    let filterForm = document.getElementById("form");
+    let fromInput = document.getElementById("from");
 
     let fetchedData = [];
     asyncFetch();
@@ -522,13 +572,31 @@
             console.log(data);
             fetchedData = data.filter(element => element.title == "Men")
             console.log(fetchedData);
-            Display(fetchedData);
+            // Display(fetchedData);
+            filterData(fetchedData);
         } catch (error) {
             console.log(error);
         }
     }
+    filterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let fromPrice = Number(filterForm.from.value);
+      let toPrice = +filterForm.to.value;
+      console.log(fromPrice + " " + toPrice);
 
+      let filtered = fetchedData.filter((element) => {
+        if (element.price >= fromPrice && element.price <= toPrice) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      Display(filtered);
+    });
+
+    let cartArr=JSON.parse(localStorage.getItem("cart"))||[];
     function Display(data) {
+        container.innerHTML="";
         data.forEach((element) => {
             let card = document.createElement("div");
 
@@ -548,11 +616,56 @@
             let add = document.createElement("button");
             add.innerText = "Add To Cart";
 
+            add.addEventListener("click",function(){
+          if(checkDublicate(element)){
+            alert("Product Already in Cart");
+          }else{
+            cartArr.push({...element,quantity:1});
+            localStorage.setItem("cart",JSON.stringify(cartArr));
+            alert("Product Added To Cart");
+          }
+        });
+
             prices.append(price, span);
             card.append(img, name, prices, add);
             container.append(card);
 
         });
+    }
+    function checkDublicate(product){
+      for(let i=0;i<cartArr.length;i++){
+        if(cartArr[i].id===product.id){
+          return true;
+        }
+      }
+      return false;
+    }
+
+    let filtered=document.getElementById("filter");
+    filtered.addEventListener("change",function(){
+        asyncFetch();
+    });
+    function filterData(data){
+      let  filterValue=filtered.value;
+        if(filterValue===""){
+          Display(data);
+        }else{
+          data=data.filter((product)=>{
+            return product.category==filterValue;
+          });
+          Display(data);
+        }
+    }
+    let tasks = JSON.parse(localStorage.getItem("account-data"));
+    function logout() {
+        if (tasks === null) {
+            alert("You have to SignUp/LogIn first.");
+            window.location.assign("log.html");
+        } else {
+            confirm("Do you really want logout?");
+            localStorage.clear();
+            window.location.assign("index.html");
+        }
     }
 </script>
 
